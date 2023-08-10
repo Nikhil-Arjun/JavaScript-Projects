@@ -3,11 +3,11 @@ const form = document.querySelector('form');
 form.addEventListener('submit', e => {
   e.preventDefault();
 
-  const height = document.querySelector('#height').value;
+  const height = parseInt(document.querySelector('#height').value);
 
-  const weight = document.querySelector('#weight').value;
+  const weight = parseInt(document.querySelector('#weight').value);
 
-  const results = document.querySelector('#results');
+  const results = parseInt(document.querySelector('#results'));
 
   if (height === '' || height < 0 || isNaN(height)) {
     results.innerHTML = `Please give a valid height ${height}`;
